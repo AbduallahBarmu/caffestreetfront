@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.container {
+  max-width: 1200px; /* Set the maximum width of the container according to your needs */
+  margin: 0 auto; /* Center the container horizontally */
+  height: 100vh; /* Set the height of the container */
+  background-color: #faedcd;
+  background-image: url(../../../assets/images/about/Exclude.svg);
+
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 7%;
+}
+
+.left-col {
+  flex: 1;
+  padding-right: 20px;
+  color: #000;
+
+  h1 {
+    font-family: "Poppins";
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 16px;
+    font-style: bold;
+    color: #6f1d1b;
+    span {
+      color: #ff902b;
+    }
+  }
+
+  p {
+    font-family: "Poppins";
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    color: #BF8C44;
+  }
+
+
+
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9em 1.75em;
+    border-radius: 6px;
+    border: 2px solid #f8d67f;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-sizing: border-box;
+    border: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #E2780E;
+    cursor: pointer;
+    outline: none;
+
+   }
+   
+   .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: #FFFFFF;
+   }
+   
+   .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover {
+    color: #ff902b
+   }
+   
+   .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+ 
+  /// 
+
+  @keyframes rotate {
+    0% {
+      transform: rotateY(180deg);
+    }
+
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+}
+
+.right-col {
+  margin-top: 70px;
+  img {
+    max-width: 100%; /* Ensure the image fits within its container */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+
+    .left-col,
+    .right-col {
+      padding-right: 0;
+      text-align: center;
+    }
+
+    .right-col {
+      img {
+        max-width: 60%;
+      }
+    }
+    .left-col {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

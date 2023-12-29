@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="cartBox">
+    <div class="master-container">
+      <div class="card cart">
+        <div class="cart-header">
+          <label class="title">Your Shopping Cart have
+            <strong class="product-length">{{ cartProducts.length }}</strong>Items
+          </label>
+          <button class="clear-btn" (click)="clearCart()">
+            Clear
+          </button>
+        </div>
+        <div class="products" *ngFor="let item of cartProducts; let index = index">
+          <div class="product">
+            <img class="product-img" src="../../../../assets/images/cart/cup.png" alt=""
+              routerLink="/details/{{ item.item._id }}" />
+            <div>
+              <span> {{ item.item.name }}</span>
+              <p>{{item.item.region}}</p>
+            </div>
+            <div class="quantity">
+              <button class="quantity-btn" (click)="addAmount(index)">+</button>
+              <input class="quantity-input" type="number" [(ngModel)]="item.quantity" min="1" />
+              <button class="quantity-btn" (click)="minsAmount(index)">-</button>
+            </div>
+            <label class="price small">${{ item.item.price }}</label>
+            <button class="delete-btn" (click)="deleteProduct(index)">
+              <mat-icon class="cart-icon">delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card checkout">
+      <label class="title">Checkout</label>
+      <div class="details">
+        <span>Your cart subtotal:</span>
+        <span>{{ total }}$</span>
+        <span>Discount:</span>
+        <span>3.99$</span>
+      </div>
+      <div class="checkout--footer">
+        <label class="price"><sup>$</sup>{{ total }}</label>
+        <button class="checkout-btn">Check out</button>
+      </div>
+    </div>
+  </div>
+</div>

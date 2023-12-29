@@ -1,0 +1,20 @@
+<div class="item">
+  <div class="card-body">
+    <div>
+      <img class="product-image" src="{{ data.image }}" alt="product-image" 
+      routerLink="/details/{{ data._id }}" />
+    </div>
+    <div class="card-info">
+      <div class="col-1">
+        <h5 class="product-name">{{ data.name }}</h5>
+        <p class="product-region">{{ data.region }}</p>
+      </div>
+      <div class="col-2">
+        <h5 class="product-price">{{ data.price }}$</h5>
+        <button class="cart-btn" (click)="addProductToCart(); addButton = false">
+          <img src="../../../../assets/images/products/ecommerce.png" alt="add-to-cart">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+  <form class="colorful-form" (ngSubmit)="addProduct(form.value)" #form="ngForm">
+
+    <div class="form-group">
+      <label class="form-label" for="name">Product Name</label>
+      <input class="form-input" type="text" id="input-name" placeholder="Enter The Product Name" ngModel name="name"
+        [(ngModel)]="data.name" required />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="email">Product Region</label>
+      <input class="form-input" type="text" id="input-region" placeholder="Enter The Product Region" ngModel
+        name="region" [(ngModel)]="data.region" required />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="message">Product Price</label>
+      <input class="form-input" type="number" id="input-price" placeholder="Enter The Product Price" ngModel
+        name="price" [(ngModel)]="data.price" required />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="message">Product Description</label>
+      <textarea class="form-input" name="description" type="text" id="input-description"
+        placeholder="Enter The Product Description" ngModel name="description" [(ngModel)]="data.description"
+        required></textarea>
+    </div>
+
+    <div class="form-group">
+      <div class="upload-image">
+        <!-- <div>
+          <img src="{{data.image}}" alt="">
+        </div>  -->
+
+        <input accept="image/*" type="file" class="form-control" placeholder="Enter Image URL" ngModel name="image"
+          (change)="onFileSelected($event)" [(ngModel)]="data.image" />
+      </div>
+    </div>
+    <input class="form-button" [disabled]="!form.valid" type="submit" value="Submit" />
+  </form>
+
+
+</div>

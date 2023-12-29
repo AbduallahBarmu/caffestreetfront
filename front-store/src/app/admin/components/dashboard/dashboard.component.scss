@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.container {
+  background-color: #f5f5f5;
+  margin-top: 10%;
+  width: 100%;
+  padding: 20px;
+}
+
+.demo-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.search-input {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 190px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-color: #fff;
+  color: #0d0c22;
+  transition: .3s ease;
+}
+
+.input::placeholder {
+  color: #9e9ea7;
+ }
+ 
+ .input:hover {
+  outline: none;
+  border: 1px solid #ff902b;
+  box-shadow: 0px 0px 20px -17px;
+ }
+
+ .input:focus {
+  border: 1px solid #ff902b;;
+}
+
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+
+.add-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 450;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #f1ca7a;
+  box-sizing: border-box;
+  border: transparent;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  background-color: #ffcb7c;
+  cursor: pointer;
+  outline: none;
+}
+
+.add-button:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #f1ca7a;
+}
+
+table {
+  font-family: "Poppins";
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  width: 100%;
+  text-align: center;
+
+  thead {
+    tr th {
+      border: none;
+      background-color: #fff;
+      text-align: center;
+      padding: 12px;
+    }
+  }
+
+  tbody {
+    display: table-row-group;
+    tr {
+      overflow: hidden;
+      display: table-row;
+      border-radius: 7px;
+
+      td {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.delete-btn {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #ff3636;
+  box-sizing: border-box;
+  border: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  outline: none;
+}
+
+.delete-btn span {
+  transition: 200ms;
+}
+
+.delete-btn .delete-text {
+  transform: translateX(35px);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.delete-btn .delete-icon {
+  position: absolute;
+  transform: translateX(110px);
+  height: 30px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.delete-btn:hover {
+  background: #ff3636;
+}
+
+.delete-btn:hover .delete-text {
+  color: transparent;
+}
+
+.delete-btn:hover .delete-icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.delete-btn:focus {
+  outline: none;
+}
+
+.delete-btn:active .delete-icon svg {
+  transform: scale(0.8);
+}
+
+// edit btn
+.btn-operations {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.edit-btn {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  border: none;
+  padding: 0px 20px;
+  background-color: #ffba32;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #eec065;
+  transition-duration: .2s;
+  box-sizing: border-box;
+  border: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.svg {
+  width: 13px;
+  position: absolute;
+  right: 0;
+  margin-top: 4px;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: .2s;
+}
+
+.edit-btn:hover {
+  color: transparent;
+}
+
+.edit-btn:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .3s;
+}
+
+.edit-btn:active {
+  transform: translate(3px, 3px);
+  transition-duration: .3s;
+  box-shadow: 2px 2px 0px rgb(140, 32, 212);
+}
